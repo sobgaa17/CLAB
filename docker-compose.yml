@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build: ./
+    ports:
+      - "6996/tcp"
+    image: mean
+    expose:
+      - 6996
+    environment:
+      NODE_ENV: development
+      SERVER_PORT: 6996
+      JWT_SECRET: 0a6b944d-d2fb-46fc-a85e-0295c986cd9f
+      MONGO_HOST: mongodb://localhost:27017
+    restart: always
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.4
