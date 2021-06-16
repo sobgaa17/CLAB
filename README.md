@@ -10,7 +10,7 @@
 ```
 git clone https://github.com/sobgaa17/CLAB.git
 cd mean
-cp .env.example .env
+cp .env.example .env (if on windows, rename .env.example to .env)
 yarn
 yarn start (for development)
 ```
@@ -20,6 +20,6 @@ yarn start (for development)
 ```
 git clone https://github.com/sobgaa17/CLAB.git
 cd mean
-cp .env.example .env
+cp .env.example .env (if on windows, rename .env.example to .env)
 docker-compose up -d
 ```
