@@ -1,11 +1,11 @@
 FROM node:14
 
 WORKDIR /usr/src/app
-ADD . /usr/src/app
+COPY . /usr/src/app
 
-RUN yarn
-RUN yarn build
+RUN yarn 
+RUN yarn build:prod
 
-EXPOSE 6996
+EXPOSE 4040
 
 CMD ["yarn", "serve"]
